@@ -5,11 +5,14 @@ let losses = 0
 let hasBlackJack = false
 let isAlive = false
 let message = ""
+let winnerMsg = ""
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("card-el")
 let winsEl = document.getElementById("wins")
 let lossesEl = document.getElementById("losses")
+let yourHoldEl = document.getElementById("yourHodl")
+let winnerMsgEl = document.getElementById("winners-msg")
 
 function getRandomCard() {
     let randomNumber =  Math.floor(Math.random()* 13) + 1
@@ -21,6 +24,7 @@ function getRandomCard() {
         return randomNumber
     }
 }
+
 
 function startGame() {
     isAlive = true
@@ -40,16 +44,12 @@ function renderGame() {
     
     sumEl.textContent = "Sum: " + sum 
     if (sum <= 20) {
-        message = "Hit or Stay"
+        message = "HIT or HODL?"
     } else if (sum === 21) { 
-        winsEl.innerText = wins += 1 
         message = "Wohoo! That's Black-Jack"
         hasBlackJack = true
     } else { 
-        message = "Loser"
-        lossesEl.textContent = losses += 1
-        isAlive = false
-    
+        message = "BUST!!"
     }
     messageEl.textContent = message
 
@@ -63,6 +63,42 @@ function newCard() {
     renderGame() 
 }
 
+let casinosCardsEl = document.getElementById("CasinosCards")
+function dealToDealer () {
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = + firstCard + secondCard
+    displayCards = sum
+}
+
+function revealCards() {
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = + firstCard + secondCard
+    displayCards = sum
+    casinosCardsEl.innerHTML = displayCards
+}
+
+function determineWinner() {
+    let winnerMsgEl = document.getElementById("winners-msg")
+    let yourCards = document.getElementById("yourHodl")
+    let CasinosSum = document.getElementById("CasinosCards")
+}
+
+
+ 
+
+let hodlEl = document.getElementById("yourHodl")
+function hodl() {
+    hodlNum = sum 
+    hodlEl.innerHTML = hodlNum;
+    dealToDealer()
+
+}
+
+
 function reset() {
     let resetEl = document.getElementById("reset-el")
     sumEl.textContent = "Sum: " + sum * 0
@@ -70,6 +106,11 @@ function reset() {
     cardsEl.textContent = "Cards "
     sum = sum * 0
     messageEl.textContent = "Casino Always Wins"
+    casinosCardsEl.textContent = ""
+    yourHoldEl.textContent = ""
+    winnerMsgEl.innerHTML = ""
+
+
 }
 
 

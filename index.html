@@ -9,18 +9,30 @@
 
   <body>
     <h1>Black-Jack</h1>
-    <p class="message" id="message-el">fancy a flutter</p>
+    <p class="message" id="message-el">fancy a flutter??</p>
     <p id="card-el">Cards:</p>
     <p id="sum-el">Sum:</p>
     <button class="startBtn" id="startGameBtn" onclick="startGame()">
       START GAME
     </button>
     <button class="startBtn" id="new-card" onclick="newCard()">HIT ME</button>
+    <button class="startBtn" id="new-card" onclick="hodl()">HODL</button>
+    <button class="startBtn" id="new-card" onclick="revealCards()">
+      SHOW CASINOS HAND
+    </button>
+    <!-- <button class="startBtn" id="new-card" onclick="determineWinner()">
+      Who Won?
+    </button> -->
     <button class="startBtn" id="new-card" onclick="reset()">RESET</button>
-    <div class="wins-losses">
-      <p id="wins">W:</p>
-      <p id="losses">L:</p>
+    <div class="scores">
+      <p class="results">Your Hodl:</p>
+      <p class="results" id="yourHodl"></p>
     </div>
+    <div class="wins-losses">
+      <p class="results">Casino's Cards:</p>
+      <p class="results" id="CasinosCards"></p>
+    </div>
+    <!-- <h3 id="winners-msg">Hello</h3> -->
     <script src="index.js"></script>
     <script src="test.js"></script>
   </body>
