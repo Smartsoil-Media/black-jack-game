@@ -1,0 +1,120 @@
+/*       */
+/* Reset */
+/*       */
+ 
+/* Box Sizing (This resets the sizing on the sudo elements aswell */
+ 
+*,
+*::before, 
+*::after {
+   box-sizing: border-box;
+}
+ 
+/*  reset margins */
+ 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+   margin: 0;
+}
+ 
+/* set up the body */
+body {
+   line-height: 1.5;
+   min-height: 100vh;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+/* make images easier to work with */
+img,
+picture {
+   max-width: 100%;
+   display: block;
+  
+}
+/* make forms easier to work with */
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+ 
+/* remove annimations for people who don't want them */
+@media (prefers-reduced-motion: reduce) {
+   *,
+   *::before,
+   *::after {
+       animation-duration: 0.01ms !important;
+       animation-iteration-count: 1 !important;
+       transition-duration: 0.01ms !important;
+       scroll-behavior: auto !important;
+   }
+}
+
+body {
+   background-image: url(images/background-image2.jpeg);
+   background-size: cover;
+   background-image: black ;
+   text-align: center;
+   color: white;
+   font-weight: bold;
+}
+ 
+h1 {
+   color: goldenrod;
+   text-shadow:  black 0px 5px;
+   font-size: 55px;
+   align-items: center;
+   text-decoration: underline;
+   padding-top: 35px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+   padding-bottom: 50px;
+   font-size: 35px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.message {
+   padding-top: 35px;
+   font-style: italic;
+}
+
+.startBtn {
+   color: goldenrod;
+   margin-bottom: 15px;
+   text-align: center;
+   width: 50%;
+   max-width: 1000px;
+   font-size: 25px;
+   background-color: rgba(0, 0, 0, 0.745);
+   opacity: .7;
+   border: solid goldenrod 2px;
+   border-radius: 5px;
+   transition: 300ms;
+   cursor: pointer;
+   margin-left: 20%;
+   touch-action: manipulation;
+   margin-right: 20%;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.startBtn:hover {
+   background-color: black;
+   opacity: 1;
+   touch-action: manipulation;
+   box-shadow: goldenrod 0px 0px 10px 5px;
+}
