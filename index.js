@@ -13,6 +13,8 @@ let winsEl = document.getElementById("wins")
 let lossesEl = document.getElementById("losses")
 let yourHoldEl = document.getElementById("yourHodl")
 let winnerMsgEl = document.getElementById("winners-msg")
+let yourCards = document.getElementById("yourHodl")
+let CasinosSum = document.getElementById("CasinosCards")
 
 function getRandomCard() {
     let randomNumber =  Math.floor(Math.random()* 13) + 1
@@ -73,18 +75,15 @@ function dealToDealer () {
 }
 
 function revealCards() {
-    let firstCard = getRandomCard()
-    let secondCard = getRandomCard()
-    cards = [firstCard, secondCard]
-    sum = + firstCard + secondCard
-    displayCards = sum
+
     casinosCardsEl.innerHTML = displayCards
-}
+
+    }
 
 function determineWinner() {
-    let winnerMsgEl = document.getElementById("winners-msg")
-    let yourCards = document.getElementById("yourHodl")
-    let CasinosSum = document.getElementById("CasinosCards")
+    if (CasinosSum > yourCards) { 
+    winnerMsg.innerHTML = "You lost to some code bro.."
+    }
 }
 
 
