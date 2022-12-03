@@ -138,11 +138,12 @@ p {
 
 .results {
    font-size: 25px;
-   padding-bottom: 0px;
+   padding-bottom: 10px;
 }
 
 #CasinosCards {
    margin-bottom: 30px;
+   padding-bottom: 30px;
 } 
 
 
