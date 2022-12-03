@@ -120,5 +120,10 @@ p {
 }
 
 .wins-losses {
-   display: inline;
+   display: flex;
+   justify-content: center;
+   justify-content: space-between;
+   margin-left: 25%;
+   margin-right: 30%;
+   
 }
