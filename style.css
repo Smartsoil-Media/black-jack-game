@@ -118,3 +118,7 @@ p {
    touch-action: manipulation;
    box-shadow: goldenrod 0px 0px 10px 5px;
 }
+
+.wins-losses {
+   display: inline;
+}
